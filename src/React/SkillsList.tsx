@@ -16,19 +16,20 @@ const SkillsList = () => {
   const [openItem, setOpenItem] = useState<string | null>(null);
 
   const skills = {
-    "Web Development": [
-      "Single Page Applications (SPAs)",
-      "Landing pages and business websites",
-      "Portfolio websites",
+    "Game Development": [
+      "Godot & raylib",
+      "Solo Game Jam Experience",
+      "Playtesting & Game Design Feedback",
     ],
-    "Mobile Development": [
-      "Mobile-friendly web apps",
-      "React Native mobile apps",
+    "Game Modding": [
+      "Minecraft, using Java/Forge",
+      "Terraria, using C#/tmodloader",
+      "Slay The Spire 2, using C#/BaseLib",
     ],
-    "UI/UX Design & Prototyping": [
-      "UI design with Figma & Canva",
-      "UX research & improvements",
-      "Prototyping for websites & mobile apps",
+    "Desktop Tool Development": [
+      "ImGui, C++, openGL, SDL2",
+      "Electron, Svelte",
+      "Python Scripting",
     ],
   };
 
