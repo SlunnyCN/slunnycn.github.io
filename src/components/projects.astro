@@ -2,7 +2,7 @@
 import { getCollection, getEntry } from 'astro:content';
 
 const allProjects = await getCollection('projects');
-console.log(all.map((p) => p.id));
+
 ---
 
 <section
@@ -19,8 +19,6 @@ console.log(all.map((p) => p.id));
           <div class="group">
             <a
               href={`/projects/${project.id}/`}
-              target="_blank"
-              rel="noopener noreferrer"
               class="block"
             >
               <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4">
