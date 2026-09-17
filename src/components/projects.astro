@@ -1,43 +1,8 @@
 ---
+import { getCollection, getEntry } from 'astro:content';
 
-interface Project {
-  title: string;
-  image: string;
-  link: string;
-  preview: string;
-  status: string;
-}
-
-const projects: Project[] = [
-  {
-    title: "Project One",
-    image: "https://placehold.co/600x400/1a1a1a/ffffff?text=Project+One",
-    link: "https://github.com",
-    preview: "https://example.com",
-    status: "Deployed",
-  },
-  {
-    title: "Project Two",
-    image: "https://placehold.co/600x400/1a1a1a/ffffff?text=Project+Two",
-    link: "https://github.com",
-    preview: "https://example.com",
-    status: "On Development",
-  },
-  {
-    title: "Project Three",
-    image: "https://placehold.co/600x400/1a1a1a/ffffff?text=Project+Three",
-    link: "https://github.com",
-    preview: "https://example.com",
-    status: "Contributor",
-  },
-  {
-    title: "Project Four",
-    image: "https://placehold.co/600x400/1a1a1a/ffffff?text=Project+Four",
-    link: "https://github.com",
-    preview: "https://example.com",
-    status: "Deployed",
-  },
-];
+const allProjects = await getCollection('projects');
+console.log(all.map((p) => p.id));
 ---
 
 <section
@@ -50,10 +15,10 @@ const projects: Project[] = [
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {
-        projects.map((project) => (
+        allProjects.map((project) => (
           <div class="group">
             <a
-              href={project.preview}
+              href={`/projects/${project.id}/`}
               target="_blank"
               rel="noopener noreferrer"
               class="block"
@@ -61,21 +26,21 @@ const projects: Project[] = [
               <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={project.data.title}
                   class="w-full h-48 md:h-72 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div class="flex items-center px-3">
                 <div class="flex-grow">
-                  <h4 class="text-2xl font-semibold">{project.title}</h4>
+                  <h4 class="text-2xl font-semibold">{project.data.title}</h4>
                   <span class="py-1 text-sm text-[var(--white-icon)]">
-                    {project.status}
+                    {project.data.description}
                   </span>
                 </div>
                 <div class="flex gap-2 ml-auto">
                   <a
                     target="_blank"
-                    href={project.link}
+                    href={project.data.githubLink}
                     aria-label="GitHub"
                     class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
                   >
@@ -90,7 +55,7 @@ const projects: Project[] = [
                   </a>
                   <a
                     target="_blank"
-                    href={project.preview}
+                    href={project.data.externalLink}
                     aria-label="Preview"
                     class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
                   >
