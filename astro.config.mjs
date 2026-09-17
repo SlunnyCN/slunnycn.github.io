@@ -4,10 +4,12 @@ import tailwind from "@astrojs/tailwind";
 
 import react from "@astrojs/react";
 
+import markdoc from "@astrojs/markdoc";
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://slunnycn.github.io',
-  integrations: [tailwind(), react()],
+  integrations: [tailwind(), react(), markdoc()],
   vite: {
     resolve: {
       alias: {
