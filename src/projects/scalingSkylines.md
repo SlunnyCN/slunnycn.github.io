@@ -6,6 +6,7 @@ githubLink: "https://github.com/SlunnyCN"
 hasExternal: true
 externalLink: "https://k0hacuu.itch.io/scaling-skylines"
 associatedDate: 2024-08-20
+image: "SS.png"
 ---
 
 # Testing Header

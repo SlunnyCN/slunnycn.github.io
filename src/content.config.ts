@@ -15,6 +15,7 @@ const projects = defineCollection({
     hasExternal: z.boolean(),
     externalLink: z.url().optional(),
     associatedDate: z.date(),
+    image: z.string(),
   }),
 });
 

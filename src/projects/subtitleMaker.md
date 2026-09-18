@@ -6,6 +6,7 @@ githubLink: "https://github.com/SlunnyCN"
 hasExternal: false
 externalLink: "https://example.com/"
 associatedDate: 2026-06-20
+image: "SSM.png"
 ---
 
 Markdown body for Subtitle Maker
