@@ -39,6 +39,8 @@ The map is exactly what it sounds like, a rough approximation of the in game map
 
 Across the entire program fuzzysearch and a searchbar is used as the main way to access the data. This was done using the javascript backend.
 
+I will not distribute this program for various reasons, namely that there are Pokemon sprites. 
+
 ### Experience
 
 I originally did not plan for this program to be so featureful. The first version of this software simply outputs a spreadsheet containing the information.
