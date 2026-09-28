@@ -17,8 +17,31 @@ const { Content } = await render(project);
 ---
 
 <Layout title="Jiamu Yang">
+
   <section class="mt-12 md:mt-0">
   <div class="prose prose-invert max-w-5xl mx-auto space-y-8 md:py-36 pb-14">
+    <button
+  type="button"
+  onclick="history.back()"
+  class="not-prose inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors mb-8 group"
+>
+  <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="transition-transform group-hover:-translate-x-1"
+        >
+          <path d="M19 12H5" />
+          <path d="M12 19l-7-7 7-7" />
+        </svg>
+  Back
+</button>
 	<Content />
   </div></section>
 	<Contact />
