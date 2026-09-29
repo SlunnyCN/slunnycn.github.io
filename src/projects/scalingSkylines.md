@@ -15,6 +15,8 @@ The game is availible on my [itch](https://k0hacuu.itch.io/scaling-skylines).
 
 ### Context
 
+![Scaling Skylines Room Selection Screen](./SS-RoomSelection.png)
+
 As one of my first actual, on time submissions to a game jam, I was pretty proud of this at the time. 
 
 I often find that it is difficult to design a game for a game jam. When the games I enjoy playing the most (4X, Sandbox, Strategy) have so many complex systems it is almost inevitable my scope ends up too ambitious. However, this jam happened at a time where I was able to focus all my attention on it for the entire duration of the jam. With some convincing from friends, I settled with a simpler idea. 
@@ -25,4 +27,6 @@ I started this project with object oriented patterns that were familiar with me.
 
 Let me be clear. My first use of signals was sloppy and involved events such as `signal.shouldUpdateInventoryIcons`. I have since improved my producers and consumers a lot, instead of just using signals as function calls. 
 
-Similarily with resources, I had no idea what should have been a resource or not. I remember seeing three nodes that were similar, and went: "Hey I should define these as a resource and load them dynamically! That would be cool!" They were my main menu navigation buttons. Today, I still love resources. However, I reach for them when they would be the most powerful. In scaling skylines I didn't even take advantage of the Serialization or the huge upsides of being reference counted. I had simply overused them as fancy nodes/containers. 
+![Scaling Skylines Room Resource Showcase](./SS-RoomRes.png)
+
+Similarily with resources, I had no idea what should have been a resource or not. I remember seeing three nodes that were similar, and went: "Hey I should define these as a resource and load them dynamically! That would be cool!" They were my main menu navigation buttons. Today, I still love resources. However, I reach for them when they would be the most powerful. In scaling skylines I didn't even take advantage of the Serialization or the huge upsides of being reference counted. I had simply overused them as fancy nodes/containers. (The screenshot above shows what I think is an okay use case of resources)
